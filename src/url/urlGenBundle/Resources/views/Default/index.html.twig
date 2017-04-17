@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html ng-app>
-<head>
-    <meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
-    <title>
-        {% block title %}
-            Генератор URL
-        {% endblock %}
-    </title>
+{% extends '::base.html.twig' %}
+
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('css/index_generator.css') }}" >
+        <link rel="stylesheet" href="{{ asset('css/inde.css') }}" >
         <link rel="stylesheet" href="{{ asset('js/bootstrap-3/css/bootstrap.css') }}">
     {% endblock %}
     {% block javascript %}
@@ -16,28 +9,7 @@
         <script src="{{ asset('js/bootstrap-3/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
     {% endblock %}
-</head>
-<body>
-<div class="headerPage">
-    <h1>Генератор коротких Url</h1>
-</div>
-<div class="BodyPage">
-    <div>
-        <form id="firmUrl" method="post" action="">
-            <div class="form-inline">
-                <label for="urlText" > Адрес для обработки: </label>
-                <input
-                        class="form-control"
 
-                        type="text"
-                        id="urlText"
-                        value=""
-                        name="fullURL"
-                        placeholder="www.site.*">
-                <input class="btn-info" name="btn_start" type="submit" value="Обработать">
-            </div>
-        </form>
-    </div>
-</div>
-</body>
-</html>
+{% block body %}
+    <h1>Проверка</h1>
+{% endblock %}

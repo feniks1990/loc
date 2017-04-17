@@ -12,14 +12,15 @@ class DefaultController extends Controller
     public function indexAction()
     {
 
-        $connectMongo = $this ->get("doctrine_mongodb");
-        $connectMongo2 = $connectMongo ->getConnection();
-        dump($connectMongo2->isConnected());
+        $connectMongo = $this ->get("doctrine_mongodb")->getConnection()->isConnected();
+
+        dump($connectMongo);
+
 
 
 
         return new Response();
-       // return $this->render('urlurlGenBundle:Default:index.html.twig');
+        //return $this->render('urlurlGenBundle:Default:index.html.twig');
     }
 
     public function addUrl(){
