@@ -1,0 +1,43 @@
+<?php
+namespace mongoDb\mongoBundle\Document;
+
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+
+/**
+ * @MongoDB\Document
+ */
+
+class shortLink{
+
+    /**
+    * @MongoDB\Id
+    */
+    protected $id;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $name;
+
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $oldUrl;
+
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+
+    protected $shortUrl;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $userAddId;
+
+
+}
+
+?>

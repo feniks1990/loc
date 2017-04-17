@@ -1,0 +1,3 @@
+urlurl_gen_homepage:
+    path:     /
+    defaults: { _controller: urlurlGenBundle:Default:index }
