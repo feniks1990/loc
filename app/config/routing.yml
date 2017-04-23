@@ -1,7 +1,4 @@
-mongo_dbmongo:
-    resource: "@mongoDbmongoBundle/Resources/config/routing.yml"
-    prefix:   mongo
-
-urlurl_gen:
-    resource: "@urlurlGenBundle/Resources/config/routing.yml"
+url_url_generate_short:
+    resource: "@urlUrlGenerateShortBundle/Resources/config/routing.yml"
     prefix:   /
+

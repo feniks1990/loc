@@ -1,0 +1,70 @@
+{% extends '::base.html.twig' %}
+{% block title %}Генератор URL{% endblock %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+        <link rel="stylesheet" href="{{ asset('js/bootstrap-3/css/bootstrap.css') }}">
+    {% endblock %}
+
+    {% block javascript %}
+        <script src="{{ asset('js/') }}"></script>
+        <script src="{{ asset('js/bootstrap-3/js/bootstrap.min.js') }}"></script>
+    {% endblock %}
+
+{% block body %}
+    <div class="row header_block">
+
+        <h1>Генератор коротких URL</h1>
+    </div>
+
+    <div class="row left ">
+
+        {{ form_start(form, {'attr': {'class': 'form-inline'}}) }}
+        {{ form_errors(form) }}
+
+        <div class="form-group">
+            {{ form_label(form.nameUrl, false, { 'label_attr': {'class': 'text-primary'} }) }}
+
+
+            {{ form_widget(form.nameUrl,{ 'value': '','attr': {'class': 'form-control' }}) }}
+
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.fullUrl, false, { 'label_attr': {'class': 'text-primary'} }) }}
+
+
+            {{ form_widget(form.fullUrl,{ 'value': '', 'attr': {'class': 'form-control'}}) }}
+
+            {% if error != 'no' %}
+                <div class="error-short">{{ error }}</div>
+            {% endif %}
+        </div>
+
+
+        <div>
+            {{ form_widget(form.saveUrl,{'attr': {'class': 'btn btn-primary'}}) }}
+        </div>
+
+        {{ form_end(form) }}
+
+    </div>
+
+
+    <div class="row right">
+
+        <div class="title text-primary">Ваши ссылки</div>
+
+        <ul class="listShort">
+            {% if listUrl != 'no' %}
+                {% for list in listUrl %}
+                    <li title="{{ list.nameUrl }}"><a target="_blank" href="{{ list.shortUrl }}">{{ list.shortUrl }}</a>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <div class="error-short">Коротких ссылок не найдено</div>
+            {% endif %}
+        </ul>
+
+    </div>
+{% endblock %}
+

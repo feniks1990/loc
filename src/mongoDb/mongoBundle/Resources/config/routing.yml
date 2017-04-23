@@ -1,3 +1,0 @@
-mongo_dbmongo_homepage:
-    path:     /
-    defaults: { _controller: mongoDbmongoBundle:Default:index }

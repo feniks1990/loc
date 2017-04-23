@@ -1,0 +1,37 @@
+<?php
+
+namespace url\UrlGenerateShortBundle\Document;
+
+use Doctrine\ODM\MongoDB\Mapping\Annotations as DBLoad;
+
+
+/**
+ *
+ * @DBLoad\Document
+ */
+class shortUrlDB
+{
+
+    /**
+     * @DBLoad\Id
+     */
+    protected $id;
+
+
+    /**
+     * @DBLoad\Field(type="string")
+     */
+    protected $fullUrl;
+
+
+    /**
+     * @DBLoad\Field(type="string")
+     */
+    protected $shortUrl;
+
+
+    /**
+     * @DBLoad\Field(type="string")
+     */
+    protected $nameUrl;
+}

@@ -13,15 +13,25 @@ imports:
 #        result_cache_driver: apc
 #        query_cache_driver: apc
 
-monolog:
-    handlers:
-        main:
-            type: fingers_crossed
-            action_level: error
-            handler: nested
-        nested:
-            type: stream
-            path: '%kernel.logs_dir%/%kernel.environment%.log'
-            level: debug
-        console:
-            type: console
+#monolog:
+#    handlers:
+#        main:
+#            type: fingers_crossed
+#            action_level: error
+#            handler: nested
+#        nested:
+#            type: stream
+#            path: '%kernel.logs_dir%/%kernel.environment%.log'
+#            level: debug
+#        console:
+#            type: console
+#
+doctrine_mongodb:
+    connections:
+        default:
+            server: "mongodb://%database_host%:%database_port%"
+            options: {}
+    default_database: symfony
+    document_managers:
+        default:
+            auto_mapping: true

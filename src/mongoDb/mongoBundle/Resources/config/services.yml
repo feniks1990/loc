@@ -1,4 +1,0 @@
-services:
-#    mongo_dbmongo.example:
-#        class: mongoDb\mongoBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -105,22 +105,13 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // mongo_dbmongo_homepage
-        if (rtrim($pathinfo, '/') === '/mongo') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'mongo_dbmongo_homepage');
-            }
-
-            return array (  '_controller' => 'mongoDb\\mongoBundle\\Controller\\DefaultController::indexAction',  '_route' => 'mongo_dbmongo_homepage',);
-        }
-
-        // urlurl_gen_homepage
+        // url_url_generate_short_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'urlurl_gen_homepage');
+                return $this->redirect($pathinfo.'/', 'url_url_generate_short_homepage');
             }
 
-            return array (  '_controller' => 'url\\urlGenBundle\\Controller\\DefaultController::indexAction',  '_route' => 'urlurl_gen_homepage',);
+            return array (  '_controller' => 'url\\UrlGenerateShortBundle\\Controller\\DefaultController::indexAction',  '_route' => 'url_url_generate_short_homepage',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

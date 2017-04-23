@@ -16,8 +16,8 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
-            new url\urlGenBundle\urlurlGenBundle(),
-            new mongoDb\mongoBundle\mongoDbmongoBundle(),
+            new url\UrlGenerateShortBundle\urlUrlGenerateShortBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

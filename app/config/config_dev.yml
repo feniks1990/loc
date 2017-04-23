@@ -32,3 +32,12 @@ monolog:
 
 #swiftmailer:
 #    delivery_addresses: ['me@example.com']
+doctrine_mongodb:
+    connections:
+        default:
+            server: "mongodb://%database_host%:%database_port%"
+            options: {}
+    default_database: symfony
+    document_managers:
+        default:
+            auto_mapping: true

@@ -1,0 +1,3 @@
+url_url_generate_short_homepage:
+    path:     /
+    defaults: { _controller: urlUrlGenerateShortBundle:Default:index }
